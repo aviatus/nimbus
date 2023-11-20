@@ -1,0 +1,23 @@
+loadBalancer:
+  # If the port is defined and tls is enabled traffic automatically will be redirected to the tls port
+  port: 80
+  timeout: 1
+  managementPort: 8081
+  tlsConfig:
+    enabled: false
+    port: 443
+    certFile: ""
+    keyFile: ""
+  services:
+    - name: container1
+      host: "container1.xooi.cc"
+      concurrencyLimit: 10
+      servers:
+        - url: "10.0.16.203:8080"
+          healthURL: "http://10.0.16.203:8080/"
+    - name: container2
+      host: "container2.xooi.cc"
+      concurrencyLimit: 10
+      servers:
+        - url: "10.0.16.203:8081"
+          healthURL: "http://10.0.16.203:8081/"
