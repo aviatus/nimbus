@@ -1,8 +1,13 @@
 loadBalancer:
   # If the port is defined and tls is enabled traffic automatically will be redirected to the tls port
-  port: 80
-  timeout: 1
+  port: 8080
+  timeout: 10
   managementPort: 8081
+  connectionPoolConfig:
+    enabled: true
+    maxIdleConns: 100
+    maxIdleConnsPerHost: 100
+    idleConnTimeout: 90
   tlsConfig:
     enabled: false
     port: 443

@@ -3,8 +3,10 @@
 [X] Add Host Base Reroute
 [X] Add timeout
 [X] Add reroute HTTP to HTTPS
-[] Check does timeout removed from queue
+[X] Remove concurrency limit for scalibility issue
+[x] Connection Pooling
+[X] Add return error
+[X] Graceful Shutdown
+[] Add limiter
 [] Add dynamic config update
 [] Add SSL
-[] Add return error
-[] Add limiter

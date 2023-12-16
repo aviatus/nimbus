@@ -1,5 +1,5 @@
 module github.com/aviatus/nimbus
 
-go 1.20
+go 1.21.4
 
-require github.com/Shopify/yaml v2.1.0+incompatible // indirect
+require gopkg.in/yaml.v2 v2.4.0
